@@ -1,0 +1,46 @@
+.container{
+    display: grid;
+    grid-template-columns: min-content 1fr;
+}
+.tutorbox{
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+    height: 100%;
+    padding: 0 1rem;
+
+}
+.videoboxAction{
+    width: 100%;
+    margin:  auto 0;
+}
+.callButton{
+    border: solid 1px #090909;
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+border-radius: 10px;
+margin: 2rem 0;}
+
+.actionbutton{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.actionbuttonBox{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.videoboxAction{
+    margin: auto 0;
+}
+
+.frame{
+    border-radius: 5px;
+    border: none;
+    margin-top: 5rem;
+}

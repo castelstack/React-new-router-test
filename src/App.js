@@ -1,24 +1,59 @@
-import logo from './logo.svg';
-import './App.css';
+import {createBrowserRouter,  RouterProvider } from 'react-router-dom';
+import ExplorePage from './pages/Explore';
+import MyLessonPage from './pages/MyLesson';
+import ShoppingCartPage from './pages/ShoppingCart';
+import StatisticsPage from './pages/Statistics';
+import TutorsPage from './pages/Tutors';
 
 function App() {
+
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element:  <TutorsPage />,
+    },
+    {
+      path: "/explore",
+      element:  <ExplorePage />,
+    },
+    {
+      path: "/lesson",
+      element:  <MyLessonPage />,
+    },
+    {
+      path: "/statistics",
+      element: <StatisticsPage />,
+    },
+    {
+      path: "/shopping-cart",
+      element:  <ShoppingCartPage />,
+    },
+  ]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <RouterProvider router={router} />
+
+      {/* <Router>
+        <Switch>
+          <Route exact path='/'>
+            <TutorsPage />
+          </Route>
+          <Route path='/explore'>
+            <ExplorePage />
+          </Route>
+          <Route path='/lesson'>
+            <MyLessonPage />
+          </Route>
+          <Route path='/statistics'>
+            <StatisticsPage />
+          </Route>
+          <Route path='/shopping-cart'>
+            <ShoppingCartPage />
+          </Route>
+        </Switch>
+      </Router> */}
+    </>
   );
 }
 
